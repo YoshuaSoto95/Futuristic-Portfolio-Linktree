@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuristic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #010101;
+            --primary: #9945FF;
+            --secondary: #14f195;
+            --terciary: #13f2e3;
+            --light: #13f2e3;
+        }
+
+        body {
+            background-color: var(--black);
+            color: white;
+            font-family: 'Share Tech Mono', monospace;
+            cursor: none;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .cursor-dot, .cursor-outline {
+            pointer-events: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            opacity: 0;
+        }
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--terciary);
+        }
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(19, 242, 227, 0.2);
+            box-shadow: 0 0 15px var(--terciary), 0 0 25px var(--terciary);
+            transition: transform 0.15s ease-out, opacity 0.2s ease;
+        }
+
+        .gradient-border {
+            position: relative;
+            padding: 4px;
+            border-radius: 9999px;
+            overflow: hidden;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            animation: rotate-gradient 5s linear infinite;
+        }
+
+        @keyframes rotate-gradient {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .animated-bg div {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.5;
+        }
+        .bg-orb-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            animation: move-orb-1 20s alternate infinite;
+        }
+        .bg-orb-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            animation: move-orb-2 25s alternate-reverse infinite;
+        }
+
+        @keyframes move-orb-1 {
+            from { transform: translate(-20%, -20%) scale(0.8); }
+            to { transform: translate(50%, 70%) scale(1.2); }
+        }
+        @keyframes move-orb-2 {
+            from { transform: translate(80%, 10%); }
+            to { transform: translate(10%, 90%); }
+        }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.19"
+  }
+}
+</script>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
