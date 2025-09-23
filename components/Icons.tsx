@@ -4,7 +4,6 @@ import { motion, TargetAndTransition } from 'framer-motion';
 
 // FIX: Explicitly typed iconHover with TargetAndTransition to resolve type inference issue.
 const iconHover: TargetAndTransition = { scale: 1.2, transition: { type: 'spring', stiffness: 300 } };
-const iconProps = { className: "w-8 h-8 text-white/70 group-hover:text-white transition-colors duration-300" };
 
 const TechIconWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <motion.div 
@@ -14,11 +13,11 @@ const TechIconWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) 
     </motion.div>
 );
 
-export const JsIcon = () => <TechIconWrapper><svg {...iconProps} fill="currentColor" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11.75 1.25a.75.75 0 00-1.5 0v16.5a.75.75 0 001.5 0V1.25zm-2.25.5a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5h-1.5zm.75 16a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5zM17.25 1.25a.75.75 0 00-1.5 0v16.5a.75.75 0 001.5 0V1.25zm-2.25.5a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5h-1.5z"/></svg></TechIconWrapper>;
-export const TsIcon = () => <TechIconWrapper><svg {...iconProps} fill="currentColor" viewBox="0 0 24 24"><path d="M11.75 1.25a.75.75 0 00-1.5 0v16.5a.75.75 0 001.5 0V1.25zm-2.25.5a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5h-1.5zm.75 16a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5zM17.25 1.25a.75.75 0 00-1.5 0v16.5a.75.75 0 001.5 0V1.25zm-2.25.5a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5h-1.5z"/></svg></TechIconWrapper>;
-export const ReactIcon = () => <TechIconWrapper><svg {...iconProps} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76l-2.12 2.12m-4.24 4.24l-2.12 2.12m0-8.48l2.12 2.12m4.24 4.24l2.12 2.12M21 12h-2m-9 0H2m7-9v2m0 14v2"></path></svg></TechIconWrapper>;
-export const NextIcon = () => <TechIconWrapper><svg {...iconProps} fill="currentColor" viewBox="0 0 18 18"><path d="M12.12,12.12,9,9,12.12,5.88,15.24,9ZM9,18A9,9,0,1,1,18,9,9,9,0,0,1,9,18ZM9,2.7A6.3,6.3,0,1,0,15.3,9,6.3,6.3,0,0,0,9,2.7Z"/></svg></TechIconWrapper>;
-export const TailwindIcon = () => <TechIconWrapper><svg {...iconProps} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></TechIconWrapper>;
+export const JsIcon = () => <TechIconWrapper><svg className="w-8 h-8" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#F7DF1E"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.261c.489 1.121.822 2.223.991 3.324H20.94c-.227-.924-.531-1.803-.923-2.652H14.88v10.33H9.555V3.42h10.33v5.328h-5.01V21.87h5.163c.189-.78.459-1.545.792-2.295.891-1.98 2.223-3.774 3.969-5.328L22.034 18.26z"/></svg></TechIconWrapper>;
+export const TsIcon = () => <TechIconWrapper><svg className="w-8 h-8 rounded" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TypeScript</title><path d="M1.5 0h21v21H1.5z" fill="#3178C6"/><path d="M6.43 14.28h3.25V7.18H6.43zm8.78.22c1.1 0 1.83-.18 2.5-.55v-2.15c-.62.4-1.33.6-2.13.6s-1.3-.2-1.7-.6c-.4-.4-.6-1-.6-1.7V7.18h-2.8v7.2c0 1.25.2 2.2.6 2.85s1.1 1 2 1z" fill="#fff"/></svg></TechIconWrapper>;
+export const ReactIcon = () => <TechIconWrapper><svg className="w-8 h-8 text-white/70 group-hover:text-white transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76l-2.12 2.12m-4.24 4.24l-2.12 2.12m0-8.48l2.12 2.12m4.24 4.24l2.12 2.12M21 12h-2m-9 0H2m7-9v2m0 14v2"></path></svg></TechIconWrapper>;
+export const NextIcon = () => <TechIconWrapper><svg className="w-8 h-8 text-white" viewBox="0 0 128 128" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M64 128C99.3462 128 128 99.3462 128 64C128 28.6538 99.3462 0 64 0C28.6538 0 0 28.6538 0 64C0 99.3462 28.6538 128 64 128ZM64 112C88.3005 112 108 92.3005 108 68C108 43.6995 88.3005 24 64 24C39.6995 24 20 43.6995 20 68C20 92.3005 39.6995 112 64 112Z" /><path d="M52.5273 88.69V39.181H63.9233V64.079L85.6023 39.181H98.1073L74.4373 68.807L98.6473 88.69H86.1833L63.9233 71.029V88.69H52.5273Z" /></svg></TechIconWrapper>;
+export const TailwindIcon = () => <TechIconWrapper><svg className="w-8 h-8" role="img" fill="#38bdf8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Tailwind CSS</title><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c-1.2,4.8,0.9,7.2,4.1,7.2c2.4,0,3.9-1.2,4.8-2.4c0.6,1.2,2.4,2.4,4.1,2.4c2.4,0,4.8-2.4,4.8-7.2c0-5.2-3.2-7.2-6.4-7.2C16.801,4.8,14.401,6,12.001,8.4C10.801,6.4,9.601,4.8,12.001,4.8z M12.001,12c-1.2,0-2.4-0.9-2.4-2.4c0-1.2,0.9-2.4,2.4-2.4c1.2,0,2.4,0.9,2.4,2.4C14.401,11.1,13.201,12,12.001,12z"/></svg></TechIconWrapper>;
 
 const linkIconProps = { className: "w-6 h-6" };
 

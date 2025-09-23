@@ -40,7 +40,7 @@ const itemVariants: Variants = {
     },
 };
 
-const LinkButton: React.FC<{ icon: React.ReactNode; text: string; href: string; }> = ({ icon, text, href }) => (
+const LinkButton: React.FC<{ icon: React.ReactNode; text: string; href: string; hoverColor?: string; }> = ({ icon, text, href, hoverColor = 'var(--terciary)' }) => (
     <motion.a
         href={href}
         target="_blank"
@@ -50,27 +50,32 @@ const LinkButton: React.FC<{ icon: React.ReactNode; text: string; href: string; 
         whileHover="hover"
     >
         <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--terciary)] to-transparent"
+            className="absolute inset-0"
+            style={{
+                background: `linear-gradient(90deg, transparent, ${hoverColor}, transparent)`
+            }}
             initial={{ x: '-100%' }}
             variants={{ hover: { x: '100%' } }}
-            transition={{ duration: 0.6, ease: 'linear' }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         />
         <span className="relative z-10 mr-4">{icon}</span>
         <span className="relative z-10">{text}</span>
     </motion.a>
 );
 
-const IconButton: React.FC<{ icon: React.ReactNode; href: string; label: string }> = ({ icon, href, label }) => (
+const IconButton: React.FC<{ icon: React.ReactNode; href: string; label: string; hoverColor?: string; }> = ({ icon, href, label, hoverColor = 'var(--terciary)' }) => (
      <motion.a
         href={href}
         aria-label={label}
         target="_blank"
         rel="noopener noreferrer"
         variants={itemVariants}
-        className="group relative p-4 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm transition-all duration-300 hover:border-[var(--terciary)]"
+        className="group relative p-4 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm transition-all duration-300 hover:border-[var(--hover-color)]"
         whileHover={{ scale: 1.1, y: -5 }}
+        // FIX: Cast style object to React.CSSProperties to allow for CSS custom properties which are not in MotionStyle by default.
+        style={{ '--hover-color': hoverColor } as React.CSSProperties}
     >
-       <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{boxShadow: '0 0 15px var(--terciary)'}} />
+       <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{boxShadow: `0 0 15px var(--hover-color)`}} />
         <span className="relative z-10">{icon}</span>
     </motion.a>
 );
@@ -112,19 +117,19 @@ const PortfolioPage: React.FC = () => {
 
                 {/* Links Section */}
                 <motion.div variants={containerVariants} className="w-full max-w-md mt-10 grid grid-cols-2 gap-4">
-                    <LinkButton icon={<TikTokIcon />} text="TikTok" href="#" />
-                    <LinkButton icon={<TikTokIcon />} text="TikTok" href="#" />
-                    <LinkButton icon={<YouTubeIcon />} text="YouTube" href="#" />
-                    <LinkButton icon={<YouTubeIcon />} text="YouTube" href="#" />
-                    <LinkButton icon={<FiverrIcon />} text="Fiverr" href="#" />
+                    <LinkButton icon={<TikTokIcon />} text="TikTok" href="#" hoverColor="#ff0050" />
+                    <LinkButton icon={<TikTokIcon />} text="TikTok" href="#" hoverColor="#00f2ea" />
+                    <LinkButton icon={<YouTubeIcon />} text="YouTube" href="#" hoverColor="#ff0000" />
+                    <LinkButton icon={<YouTubeIcon />} text="YouTube" href="#" hoverColor="#ffffff" />
+                    <LinkButton icon={<FiverrIcon />} text="Fiverr" href="#" hoverColor="#1dbf73" />
                     <LinkButton icon={<GlobeIcon />} text="Portfolio" href="#" />
                 </motion.div>
                 
                  {/* Social Contact Section */}
                 <motion.div variants={containerVariants} className="flex items-center space-x-6 mt-10">
-                   <IconButton icon={<WhatsappIcon />} href="#" label="WhatsApp" />
-                   <IconButton icon={<GmailIcon />} href="#" label="Gmail" />
-                   <IconButton icon={<GithubIcon />} href="#" label="GitHub" />
+                   <IconButton icon={<WhatsappIcon />} href="#" label="WhatsApp" hoverColor="#25d366" />
+                   <IconButton icon={<GmailIcon />} href="#" label="Gmail" hoverColor="#ea4335" />
+                   <IconButton icon={<GithubIcon />} href="#" label="GitHub" hoverColor="#ffffff"/>
                 </motion.div>
             </div>
         </motion.main>
