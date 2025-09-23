@@ -118,11 +118,11 @@ const PortfolioPage: React.FC = () => {
                 </motion.div>
 
                 {/* Links Section */}
-                <motion.div variants={containerVariants} className="w-full max-w-md mt-10 grid grid-cols-2 gap-4">
-                    <LinkButton icon={<TikTokIcon />} text="TikTok" href="https://www.tiktok.com/@dannkloppering1" target="_blank" hoverColor="#ff0050" />
-                    <LinkButton icon={<TikTokIcon />} text="TikTok" href="https://www.tiktok.com/@dann33devfront" target="_blank" hoverColor="#00f2ea" />
-                    <LinkButton icon={<YouTubeIcon />} text="YouTube" href="https://www.youtube.com/@kloppering.developer" target="_blank" hoverColor="#ff0000" />
-                    <LinkButton icon={<YouTubeIcon />} text="YouTube" href="https://www.youtube.com/@dann33devfrontend" target="_blank" hoverColor="#ffffff" />
+                <motion.div variants={containerVariants} className="w-full max-w-md mt-10 grid grid-cols-1 gap-4">
+                    <LinkButton icon={<TikTokIcon />} text="@dannkloppering1" href="https://www.tiktok.com/@dannkloppering1" target="_blank" hoverColor="#ff0050" />
+                    <LinkButton icon={<TikTokIcon />} text="@dann33devfront" href="https://www.tiktok.com/@dann33devfront" target="_blank" hoverColor="#00f2ea" />
+                    <LinkButton icon={<YouTubeIcon />} text="@kloppering.developer" href="https://www.youtube.com/@kloppering.developer" target="_blank" hoverColor="#ff0000" />
+                    <LinkButton icon={<YouTubeIcon />} text="@dann33devfrontend" href="https://www.youtube.com/@dann33devfrontend" target="_blank" hoverColor="#ffffff" />
                     <LinkButton icon={<FiverrIcon />} text="Fiverr" href="https://es.fiverr.com/soto_yoshua33?public_mode=true" target="_blank" hoverColor="#1dbf73" />
                     <LinkButton icon={<GlobeIcon />} text="Portfolio" href="" />
                 </motion.div>
