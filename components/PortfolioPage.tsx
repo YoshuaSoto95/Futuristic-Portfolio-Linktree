@@ -1,4 +1,5 @@
 import React from 'react';
+import PictureImage from '../pictures/character.jpeg';
 // FIX: Added Variants type import from framer-motion to help TypeScript correctly infer types.
 import { motion, Variants } from 'framer-motion';
 import {
@@ -15,6 +16,7 @@ import {
     GmailIcon,
     GithubIcon
 } from './Icons';
+
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -100,7 +102,7 @@ const PortfolioPage: React.FC = () => {
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                     >
                         <img
-                            src="../components/pictures/character.jpeg"
+                            src={PictureImage}
                             alt="Profile"
                             className="w-32 h-32 rounded-full object-cover"
                         />
