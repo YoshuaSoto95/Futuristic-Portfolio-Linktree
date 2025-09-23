@@ -1,20 +1,59 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+## 🌐 Linktree Personal – React + TypeScript
 
-# Run and deploy your AI Studio app
+# 📌 Descripción
 
-This contains everything you need to run your app locally.
+Este proyecto es una página personal estilo Linktree desarrollada con React + TypeScript, usando Framer Motion para animaciones fluidas y TailwindCSS para el estilado.
+Incluye un background dinámico con CSS puro y una estructura adaptable y minimalista para centralizar enlaces a redes sociales, portafolio y contactos.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1CzH9m87cly99XGUtBwJJWSSsVKhF79Xo
+# 🚀 Características
 
-## Run Locally
+⚡ Construido con React + TypeScript.
 
-**Prerequisites:**  Node.js
+🎨 Estilos rápidos y responsivos con TailwindCSS.
+
+🎬 Animaciones suaves con Framer Motion.
+
+🖌 Fondo animado con CSS puro.
+
+🔗 Enlaces centralizados a redes sociales, Fiverr y portafolio.
+
+📱 Diseño responsive y minimalista.
+
+# 🛠 Tecnologías
+
+React
+
+TypeScript
+
+TailwindCSS
+
+Framer Motion
+
+CSS3
+
+# 📂 Instalación
+
+Clona este repositorio e instala dependencias:
+
+git clone https://github.com/YoshuaSoto95/Futuristic-Portfolio-Linktree.git
+cd linktree-personal
+npm install
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Ejecuta el proyecto en local:
+
+npm run dev
+
+# 📷 Capturas
+
+![Yoshua Daniel Soto | LinkTree Personal](banner.png)
+
+Ver Live: https://dannkloppering-linktree.netlify.app/
+
+📜 Créditos
+
+Creado por Yoshua Daniel Soto
+
+Inspirado en la idea de Linktree
+
+Generación de ideas y apoyo en código: Google AI Studio
