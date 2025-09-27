@@ -8,6 +8,7 @@ import {
     NextIcon,
     TailwindIcon,
     TikTokIcon,
+    InstagramIcon,
     YouTubeIcon,
     FiverrIcon,
     GlobeIcon,
@@ -134,6 +135,7 @@ const PortfolioPage: React.FC = () => {
                 {/* Links Section */}
                 <div className="w-full max-w-md mt-10 flex flex-col gap-4">
                     <LinkButton icon={<TikTokIcon />} text="TikTok" href="#" hoverColor="#ff0050" />
+                    <LinkButton icon={<InstagramIcon />} text="Instagram" href="#" hoverColor="#C13584" />
                     <LinkButton icon={<YouTubeIcon />} text="YouTube" href="#" hoverColor="#ff0000" />
                     <LinkButton icon={<FiverrIcon />} text="Fiverr" href="#" hoverColor="#1dbf73" />
                     <LinkButton icon={<GlobeIcon />} text="Portafolio" href="#" />
