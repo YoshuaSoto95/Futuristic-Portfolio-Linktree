@@ -1,16 +1,10 @@
 import React from 'react';
-// FIX: Added TargetAndTransition type import from framer-motion to help TypeScript correctly infer types.
-import { motion, TargetAndTransition } from 'framer-motion';
-
-// FIX: Explicitly typed iconHover with TargetAndTransition to resolve type inference issue.
-const iconHover: TargetAndTransition = { scale: 1.2, transition: { type: 'spring', stiffness: 300 } };
 
 const TechIconWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <motion.div 
-        className="p-3 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm"
-        whileHover={iconHover}>
+    <div
+        className="p-3 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
         {children}
-    </motion.div>
+    </div>
 );
 
 export const JsIcon = () => <TechIconWrapper><svg className="w-8 h-8" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#F7DF1E"><title>JavaScript</title><path d="M0 0h24v24H0V0zm22.034 18.261c.489 1.121.822 2.223.991 3.324H20.94c-.227-.924-.531-1.803-.923-2.652H14.88v10.33H9.555V3.42h10.33v5.328h-5.01V21.87h5.163c.189-.78.459-1.545.792-2.295.891-1.98 2.223-3.774 3.969-5.328L22.034 18.26z"/></svg></TechIconWrapper>;

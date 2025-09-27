@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yoshua Daniel Soto | Links Portfolio
-    </title>
+    <title>Futuristic Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="./pictures/icon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
             --black: #010101;
@@ -26,43 +22,11 @@
             background-color: var(--black);
             color: white;
             font-family: 'Share Tech Mono', monospace;
-            cursor: none;
             overflow-x: hidden;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        h1, h2, h3, h4, h5, h6 {
             font-family: 'Orbitron', sans-serif;
-        }
-
-        .cursor-dot,
-        .cursor-outline {
-            pointer-events: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            z-index: 9999;
-            opacity: 0;
-        }
-
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--terciary);
-        }
-
-        .cursor-outline {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(19, 242, 227, 0.2);
-            box-shadow: 0 0 15px var(--terciary), 0 0 25px var(--terciary);
-            transition: transform 0.15s ease-out, opacity 0.2s ease;
         }
 
         .gradient-border {
@@ -71,17 +35,6 @@
             border-radius: 9999px;
             overflow: hidden;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
-            animation: rotate-gradient 5s linear infinite;
-        }
-
-        @keyframes rotate-gradient {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
         }
 
         .animated-bg {
@@ -93,63 +46,71 @@
             overflow: hidden;
             z-index: -1;
         }
-
         .animated-bg div {
             position: absolute;
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.5;
         }
-
         .bg-orb-1 {
             width: 500px;
             height: 500px;
             background: var(--primary);
             animation: move-orb-1 20s alternate infinite;
         }
-
         .bg-orb-2 {
             width: 400px;
             height: 400px;
             background: var(--secondary);
             animation: move-orb-2 25s alternate-reverse infinite;
         }
+        .bg-orb-3 {
+            width: 350px;
+            height: 350px;
+            background: var(--terciary);
+            animation: move-orb-3 18s alternate infinite;
+        }
+        .bg-orb-4 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            animation: move-orb-4 22s alternate-reverse infinite;
+        }
 
         @keyframes move-orb-1 {
-            from {
-                transform: translate(-20%, -20%) scale(0.8);
-            }
-
-            to {
-                transform: translate(50%, 70%) scale(1.2);
-            }
+            from { top: 10%; left: -20%; }
+            to { top: 70%; left: 40%; }
         }
-
         @keyframes move-orb-2 {
-            from {
-                transform: translate(80%, 10%);
-            }
-
-            to {
-                transform: translate(10%, 90%);
-            }
+            from { top: 80%; left: 10%; }
+            to { top: 10%; left: 80%; }
         }
+        @keyframes move-orb-3 {
+            from { top: 50%; left: 90%; }
+            to { top: 20%; left: 20%; }
+        }
+        @keyframes move-orb-4 {
+            from { top: -10%; left: 60%; }
+            to { top: 90%; left: 90%; }
+        }
+
     </style>
-    <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.1.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.19"
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.19",
+    "@tsparticles/react": "https://aistudiocdn.com/@tsparticles/react@^3.0.0",
+    "@tsparticles/engine": "https://aistudiocdn.com/@tsparticles/engine@^3.9.1",
+    "tsparticles-slim": "https://aistudiocdn.com/tsparticles-slim@^2.12.0"
   }
 }
 </script>
 </head>
-
 <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+<div id="root"></div>
+<script type="module" src="/index.tsx"></script>
 </body>
-
 </html>
