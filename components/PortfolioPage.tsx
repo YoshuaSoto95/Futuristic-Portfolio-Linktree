@@ -87,7 +87,7 @@ const IconButton: React.FC<{ icon: React.ReactNode; href: string; label: string;
 );
 
 const PortfolioPage: React.FC = () => {
-    const description = "Fullstack Developer, skilled in vanilla HTML, CSS, and JS for any Landing Page, Web, or Web App. React developer using Framer Motion and Tailwind to bring your ideas to life with the best Figma-style designs for your Landing Page or Web App.";
+    const description = "Desarrollador Fullstack, experto en HTML, CSS y JS para cualquier Landing Page, Web o Web App. Desarrollador React usando Framer Motion y Tailwind para dar vida a tus ideas con los mejores diseños estilo Figma para tu Landing Page o Web App.";
     const techIcons = [<JsIcon />, <TsIcon />, <ReactIcon />, <NextIcon />, <TailwindIcon />];
 
     return (
@@ -136,7 +136,7 @@ const PortfolioPage: React.FC = () => {
                     <LinkButton icon={<TikTokIcon />} text="TikTok" href="#" hoverColor="#ff0050" />
                     <LinkButton icon={<YouTubeIcon />} text="YouTube" href="#" hoverColor="#ff0000" />
                     <LinkButton icon={<FiverrIcon />} text="Fiverr" href="#" hoverColor="#1dbf73" />
-                    <LinkButton icon={<GlobeIcon />} text="Portfolio" href="#" />
+                    <LinkButton icon={<GlobeIcon />} text="Portafolio" href="#" />
                 </div>
                 
                  {/* Social Contact Section */}

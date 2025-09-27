@@ -1,5 +1,5 @@
 {
-  "name": "futuristic-portfolio-linktree",
+  "name": "portafolio-futurista-estilo-linktree",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,7 +14,8 @@
     "framer-motion": "^12.23.19",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/engine": "^3.9.1",
-    "tsparticles-slim": "^2.12.0"
+    "tsparticles-slim": "^2.12.0",
+    "@tsparticles/slim": "^3.9.1"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

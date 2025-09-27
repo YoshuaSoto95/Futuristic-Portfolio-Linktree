@@ -2,7 +2,8 @@ import React, { useEffect, useMemo, useState } from "react";
 // FIX: 'initParticlesEngine', 'Container', and 'ISourceOptions' are not exported from 'react-tsparticles'. The package has been updated to '@tsparticles/react' and types are now imported from '@tsparticles/engine'.
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, ISourceOptions } from "@tsparticles/engine";
-import { loadSlim } from "tsparticles-slim";
+// FIX: The 'tsparticles-slim' package can cause type conflicts with '@tsparticles/react'. Using the correctly scoped '@tsparticles/slim' package resolves the type mismatch for the engine instance.
+import { loadSlim } from "@tsparticles/slim";
 
 const ParticlesBackground: React.FC = () => {
     const [init, setInit] = useState(false);
@@ -88,8 +89,8 @@ const ParticlesBackground: React.FC = () => {
         return (
             <Particles
                 id="tsparticles"
-                // FIX: Property 'particlesLoaded' does not exist on the Particles component type. It was renamed to 'loaded' in a newer version of the library.
-                loaded={particlesLoaded}
+                // FIX: The error "Property 'loaded' does not exist" indicates that the installed version of the library expects the 'particlesLoaded' prop instead.
+                particlesLoaded={particlesLoaded}
                 options={options}
                 style={{ position: 'fixed', zIndex: -1, top: 0, left: 0 }}
             />

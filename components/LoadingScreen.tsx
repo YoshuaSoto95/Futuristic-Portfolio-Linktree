@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -33,7 +32,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onFinished }) => {
         >
             <div className="w-3/4 max-w-lg text-center">
                 <h2 className="text-2xl md:text-4xl font-bold text-[var(--terciary)] mb-4 tracking-widest">
-                    INITIALIZING INTERFACE
+                    INICIALIZANDO INTERFAZ
                 </h2>
                 <div className="w-full bg-gray-800/50 rounded-full h-4 backdrop-blur-sm border border-gray-700">
                     <motion.div
