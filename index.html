@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="shortcut icon" href="./components/asset/image/character.jpeg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio Futurista</title>
+    <title>Yoshua Daniel Soto | Linktree</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --black: #010101;
@@ -25,7 +28,12 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Orbitron', sans-serif;
         }
 
@@ -46,30 +54,35 @@
             overflow: hidden;
             z-index: -1;
         }
+
         .animated-bg div {
             position: absolute;
             border-radius: 50%;
             filter: blur(100px);
             opacity: 0.5;
         }
+
         .bg-orb-1 {
             width: 500px;
             height: 500px;
             background: var(--primary);
             animation: move-orb-1 20s alternate infinite;
         }
+
         .bg-orb-2 {
             width: 400px;
             height: 400px;
             background: var(--secondary);
             animation: move-orb-2 25s alternate-reverse infinite;
         }
+
         .bg-orb-3 {
             width: 350px;
             height: 350px;
             background: var(--terciary);
             animation: move-orb-3 18s alternate infinite;
         }
+
         .bg-orb-4 {
             width: 300px;
             height: 300px;
@@ -78,24 +91,54 @@
         }
 
         @keyframes move-orb-1 {
-            from { top: 10%; left: -20%; }
-            to { top: 70%; left: 40%; }
-        }
-        @keyframes move-orb-2 {
-            from { top: 80%; left: 10%; }
-            to { top: 10%; left: 80%; }
-        }
-        @keyframes move-orb-3 {
-            from { top: 50%; left: 90%; }
-            to { top: 20%; left: 20%; }
-        }
-        @keyframes move-orb-4 {
-            from { top: -10%; left: 60%; }
-            to { top: 90%; left: 90%; }
+            from {
+                top: 10%;
+                left: -20%;
+            }
+
+            to {
+                top: 70%;
+                left: 40%;
+            }
         }
 
+        @keyframes move-orb-2 {
+            from {
+                top: 80%;
+                left: 10%;
+            }
+
+            to {
+                top: 10%;
+                left: 80%;
+            }
+        }
+
+        @keyframes move-orb-3 {
+            from {
+                top: 50%;
+                left: 90%;
+            }
+
+            to {
+                top: 20%;
+                left: 20%;
+            }
+        }
+
+        @keyframes move-orb-4 {
+            from {
+                top: -10%;
+                left: 60%;
+            }
+
+            to {
+                top: 90%;
+                left: 90%;
+            }
+        }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.1.1",
@@ -110,8 +153,10 @@
 }
 </script>
 </head>
+
 <body>
-<div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

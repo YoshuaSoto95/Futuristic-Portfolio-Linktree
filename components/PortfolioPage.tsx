@@ -16,7 +16,7 @@ import {
     GmailIcon,
     GithubIcon
 } from './Icons';
-
+import ImagenIcon from '../components/asset/image/character.jpeg';
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,7 +65,7 @@ const LinkButton: React.FC<{ icon: React.ReactNode; text: string; href: string; 
 );
 
 const IconButton: React.FC<{ icon: React.ReactNode; href: string; label: string; hoverColor?: string; }> = ({ icon, href, label, hoverColor = 'var(--terciary)' }) => (
-     <motion.a
+    <motion.a
         href={href}
         aria-label={label}
         target="_blank"
@@ -76,19 +76,19 @@ const IconButton: React.FC<{ icon: React.ReactNode; href: string; label: string;
         // FIX: Cast style object to React.CSSProperties to allow for CSS custom properties which are not in MotionStyle by default.
         style={{ '--hover-color': hoverColor } as React.CSSProperties}
     >
-       <div 
-         className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
-         style={{
-             backgroundColor: `var(--hover-color)`,
-             boxShadow: `0 0 15px var(--hover-color)`
-         }} 
-       />
+        <div
+            className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style={{
+                backgroundColor: `var(--hover-color)`,
+                boxShadow: `0 0 15px var(--hover-color)`
+            }}
+        />
         <span className="relative z-10">{icon}</span>
     </motion.a>
 );
 
 const PortfolioPage: React.FC = () => {
-    const description = "Desarrollador Fullstack, experto en HTML, CSS y JS para cualquier Landing Page, Web o Web App. Desarrollador React usando Framer Motion y Tailwind para dar vida a tus ideas con los mejores diseños estilo Figma para tu Landing Page o Web App.";
+    const description = "Desarrollador Fullstack para cualquier Landing Page, Web o Web App. Desarrollo en React + Typescript usando Framer Motion y Tailwind para dar vida a tus ideas con los mejores diseños estilo Figma para tu Landing Page o Web App.";
     const techIcons = [<JsIcon />, <TsIcon />, <ReactIcon />, <NextIcon />, <TailwindIcon />];
 
     return (
@@ -104,21 +104,21 @@ const PortfolioPage: React.FC = () => {
             >
                 {/* Profile Section */}
                 <motion.div variants={itemVariants}>
-                    <div 
+                    <div
                         className="gradient-border"
                     >
                         <img
-                            src="https://picsum.photos/128/128"
+                            src={ImagenIcon}
                             alt="Profile"
                             className="w-32 h-32 rounded-full object-cover"
                         />
                     </div>
                 </motion.div>
-                
+
                 <motion.h2 variants={itemVariants} className="text-3xl font-bold mt-6">Yoshua Daniel Soto</motion.h2>
                 <motion.h3 variants={itemVariants} className="text-xl text-[var(--terciary)] mt-1">Dann Kloppering</motion.h3>
                 <motion.p variants={itemVariants} className="mt-4 text-white/80 max-w-lg">{description}</motion.p>
-                
+
 
                 {/* Tech Icons */}
                 <motion.div variants={itemVariants} className="flex items-center space-x-4 mt-6">
@@ -134,18 +134,18 @@ const PortfolioPage: React.FC = () => {
 
                 {/* Links Section */}
                 <div className="w-full max-w-md mt-10 flex flex-col gap-4">
-                    <LinkButton icon={<TikTokIcon />} text="TikTok" href="#" hoverColor="#ff0050" />
-                    <LinkButton icon={<InstagramIcon />} text="Instagram" href="#" hoverColor="#C13584" />
-                    <LinkButton icon={<YouTubeIcon />} text="YouTube" href="#" hoverColor="#ff0000" />
-                    <LinkButton icon={<FiverrIcon />} text="Fiverr" href="#" hoverColor="#1dbf73" />
-                    <LinkButton icon={<GlobeIcon />} text="Portafolio" href="#" />
+                    <LinkButton icon={<TikTokIcon />} text="Mi TikTok" href="https://www.tiktok.com/@dannkloppering1" hoverColor="#ff0050" />
+                    <LinkButton icon={<InstagramIcon />} text="Mi Instagram" href="https://www.instagram.com/dannkloppering1/" hoverColor="#C13584" />
+                    <LinkButton icon={<YouTubeIcon />} text="Tutoriales en YouTube" href="https://www.youtube.com/@dannkloppering" hoverColor="#ff0000" />
+                    <LinkButton icon={<FiverrIcon />} text="Mira mis servicios en Fiverr" href="https://es.fiverr.com/soto_yoshua33?public_mode=true" hoverColor="#1dbf73" />
+                    <LinkButton icon={<GlobeIcon />} text="Mira mi portafolio" href="#" />
                 </div>
-                
-                 {/* Social Contact Section */}
+
+                {/* Social Contact Section */}
                 <div className="flex items-center space-x-6 mt-10">
-                   <IconButton icon={<WhatsappIcon />} href="#" label="WhatsApp" hoverColor="#25d366" />
-                   <IconButton icon={<GmailIcon />} href="#" label="Gmail" hoverColor="#ea4335" />
-                   <IconButton icon={<GithubIcon />} href="#" label="GitHub" hoverColor="#ffffff"/>
+                    <IconButton icon={<WhatsappIcon />} href="https://api.whatsapp.com/send/?phone=584164637506&text=Hola%2C+estoy+interesado+en+el+servicio+de+dise%C3%B1o+web.&type=phone_number&app_absent=0" label="WhatsApp" hoverColor="#25d366" />
+                    <IconButton icon={<GmailIcon />} href="mailto:yoshuasoto54@gmail.com" label="Gmail" hoverColor="#ea4335" />
+                    <IconButton icon={<GithubIcon />} href="https://github.com/YoshuaSoto95?tab=repositories" label="GitHub" hoverColor="#ffffff" />
                 </div>
             </motion.div>
         </main>
